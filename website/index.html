@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<!-- Open HTML -->
+<html lang="pt-br">
+    <!-- Open Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Movie DB</title>
+		<!--<script type="text/javascript">-->
+			<!--window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/demo.harutheme.com\/circle\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};-->
+			<!--!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);-->
+		<!--</script>-->
+		<link rel='stylesheet' id='js_composer_front-css'  href='http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.4.5' type='text/css' media='all' />
+		<link rel='stylesheet' id='bootstrap-css'  href='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/bootstrap/css/bootstrap.min.css?ver=4.9.8' type='text/css' media='all' />
+		<link rel='stylesheet' id='font-awesome-css'  href='http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.4.5' type='text/css' media='all' />
+		<link rel='stylesheet' id='font-ionicons-css'  href='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/ionicons/css/ionicons.min.css?ver=4.9.8' type='text/css' media='all' />
+		<link rel='stylesheet' id='haru-theme-style-css'  href='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/style.css?ver=4.9.8' type='text/css' media='all' />
+		<link rel='stylesheet' id='redux-google-fonts-haru_circle_options-css'  href='http://fonts.googleapis.com/css?family=Nunito+Sans%3A200%2C300%2C400%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C900italic%7CPlayfair+Display+SC%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CPlayfair+Display%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CUbuntu%3A300%2C400%2C500%2C700%2C300italic%2C400italic%2C500italic%2C700italic&#038;ver=1520138991' type='text/css' media='all' />
+		<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+		<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+
+		<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.4.7.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+		<style type="text/css">
+			img.wp-smiley,
+			img.emoji {
+				display: inline !important;
+				border: none !important;
+				box-shadow: none !important;
+				height: 1em !important;
+				width: 1em !important;
+				margin: 0 .07em !important;
+				vertical-align: -0.1em !important;
+				background: none !important;
+				padding: 0 !important;
+			}
+		</style>
+		<style type="text/css" title="dynamic-css" class="options-output">
+			body{font-family:"Nunito Sans";font-weight:400;font-style:normal;font-size:14px;}
+			h1{font-family:"Playfair Display";font-weight:700;font-style:normal;font-size:36px;}
+			h2{font-family:"Playfair Display";font-weight:700;font-style:normal;font-size:28px;}
+			h3{font-family:"Playfair Display";font-weight:700;font-style:normal;font-size:24px;}
+			h4{font-family:"Playfair Display";font-weight:700;font-style:normal;font-size:21px;}
+			h5{font-family:"Playfair Display";font-weight:700;font-style:normal;font-size:18px;}
+			h6{font-family:"Playfair Display";font-weight:700;font-style:normal;font-size:14px;}
+			{font-family:"Nunito Sans";font-weight:700;font-size:14px;}
+			.page-title-inner h1{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:36px;}
+			.page-title-inner .page-sub-title{font-family:Ubuntu;font-weight:400;font-style:italic;font-size:14px;}
+		</style>
+		<style type="text/css" data-type="vc_shortcodes-custom-css">
+			.vc_custom_1503416552425{padding-right: 3% !important;padding-bottom: 6% !important;padding-left: 3% !important;background-color: #1e1e1e !important;}
+			.vc_custom_1503414344381{padding-right: 0px !important;padding-left: 0px !important;}
+		</style>
+	</head>
+    <!-- Close Head -->
+    <body class="page-template-default page page-id-1040 layout-wide header-sidebar wpb-js-composer js-comp-ver-5.4.5 vc_responsive">
+        <!-- Display newsletter popup -->
+        <!-- Open haru main -->
+		<div id="haru-main">
+			<header id="haru-mobile-header" class="haru-mobile-header header-mobile-1">
+        		<div class="haru-header-container-wrapper menu-drop-fly header-mobile-sticky">
+        			<div class="container haru-mobile-header-wrapper">
+            			<div class="haru-mobile-header-inner">
+							<!-- End Header mobile customize -->
+							<div class="header-logo-mobile">
+								<a  href="#" title="logo trabalho de DB">
+									Movie DB
+								</a>
+                    		</div>
+						</div>
+						<div class="haru-mobile-menu-overlay"></div>
+                    </div>
+    			</div>
+			</header>
+			<header id="haru-header" class="haru-main-header header-sidebar header-desktop-wrapper header-dark">
+    			<div class="vertical-header-wrapper">
+        			<div class="header-top">
+						<div class="header-logo has-logo-sticky">
+							<a href="#" class="logo-default" title="logo do trabalho com o nome Movie DB">
+								Movie DB
+							</a>
+    					</div>
+					</div>
+					<div class="header-bottom">
+						<div class="header-customize header-customize-nav">
+							<div class="header-customize-item user-account-wrapper">
+								<a href="#">Login</a>
+								<a href="#">Sign Up</a>
+							</div>
+							<ul class="header-customize-item header-social-profile-wrapper">
+								<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+								<li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+							</ul>
+							<div class="custom-text-wrapper header-customize-item">
+								Copyright 2018 <span>Movie DB</span><br>
+								All Rights Reserved
+							</div>
+						</div>
+					</div>
+    			</div>
+			</header>
+			<div id="haru-modal-search" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade">
+        		<div class="modal-backdrop fade in"></div>
+        			<div class="haru-modal-dialog haru-modal-search fade in">
+            			<div data-dismiss="modal" class="haru-dismiss-modal"><i class="ion-android-close"></i></div>
+						<div class="haru-search-result">
+							<div class="haru-search-wrapper">
+								<form  method="get" action="http://demo.harutheme.com/circle" class="search-popup-inner">
+									<input type="text" name="s" placeholder="Search for...">
+									<button type="submit"><i class="ion-ios-search-strong"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+			</div>
+                <!-- Open HARU Content Main -->
+            <div id="haru-content-main" class="clearfix">
+				<main class="haru-page">
+					<div class="page-content col-md-12 col-sm-12 col-xs-12">
+                		<div class="page-wrapper">
+                    		<div class="page-inner clearfix">
+								<div id="post-1040" class="post-1040 page type-page status-publish hentry clearfix">
+    								<div class="entry-content">
+										<div class="vc_row wpb_row vc_row-fluid vc_custom_1503416552425 vc_row-has-fill">
+											<div class="wpb_column vc_column_container vc_col-sm-12">
+												<div class="vc_column-inner "><div class="wpb_wrapper">
+													<div class="vc_row wpb_row vc_inner vc_row-fluid">
+														<div class="wpb_column vc_column_container vc_col-sm-12">
+															<div class="vc_column-inner ">
+																<div class="wpb_wrapper">
+																	<div class=" ">
+																		<div class="film-search-form-shortcode-wrapper search-form-ajax ">
+																			<!-- FILM SEARCH FORM -->
+																			<form role="search" method="get" id="film-searchform" class="film-searchform" action="http://demo.harutheme.com/circle">
+																				<div class="data-search"
+																					data-current_page="http://demo.harutheme.com/circle/home-7"
+																					data-columns="5"
+																					data-film_style="style_1"
+																					data-paging_style="loadmore"
+																					data-per_page="5">
+
+																					<input type="text" value="" name="s" id="s" placeholder="Search for a Movie, Film..." />
+
+																					<select name="category" id="category">
+																						<option value="">Category</option>
+																						<option value="action">Action</option>
+																						<option value="comedy">Comedy</option>
+																						<option value="drama">Drama</option>
+																						<option value="harutheme">HaruTheme</option>
+																						<option value="historycal">Historycal</option>
+																						<option value="series-film">Series Film</option>
+																						<option value="short-film">Short Film</option>
+																					</select>
+
+																					<select name="country" id="country">
+																						<option value="">Country</option>
+																						<option value="france">France</option>
+																						<option value="germany">Germany</option>
+																						<option value="italia">Italia</option>
+																						<option value="spain">Spain</option>
+																						<option value="usa">USA</option><
+																					</select>
+
+																					<select name="year" id="year">
+																						<option value="">Year</option>
+																						<option value="2014">2014</option>
+																						<option value="2015">2015</option>
+																						<option value="2016">2016</option>
+																						<option value="2017">2017</option>
+																					</select>
+
+																					<select name="sort" id="sort">
+																						<option value="">Sort By</option>
+																						<option value="date-desc">Newest</option>
+																						<option value="date-asc">Oldest</option>
+																						<option value="title-desc">Title (A-&gt;Z)</option>
+																						<option value="title-asc">Title (Z-&gt;A)</option>
+																						<option value="rand">Random</option>
+																					</select>
+
+																					<input type="hidden" name="post_type" value="haru_film" />
+																				</div>
+																			</form>
+																		<!-- END FILM SEARCH FORM -->
+																		<div class="film-content">
+									<div class="film-list columns-5">
+															<div class="film-item style_1 action drama ">
+							<div class="film-image">
+								<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/wynonna.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/wynonna.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/wynonna-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                    <div class="film-label hot">
+										Hot            </div>
+													<div class="film-icon"><a href="http://demo.harutheme.com/circle/film/wynonna/" class="view-film-button-direct"></a></div>
+									</div>
+							<div class="film-meta">
+								<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+								<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/wynonna/">Wynonna</a></h3>
+								<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/action/" rel="tag">Action</a> / <a href="http://demo.harutheme.com/circle/film-category/drama/" rel="tag">Drama</a></div>
+							</div>
+						</div>                                    <div class="film-item style_1 comedy historycal ">
+							<div class="film-image">
+								<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/war-is-coming.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/war-is-coming.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/war-is-coming-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                    <div class="film-label trending">
+										Trend            </div>
+													<div class="film-icon"><a href="http://demo.harutheme.com/circle/film/war-is-coming/" class="view-film-button-direct"></a></div>
+									</div>
+							<div class="film-meta">
+								<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+								<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/war-is-coming/">War is Coming</a></h3>
+								<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/comedy/" rel="tag">Comedy</a> / <a href="http://demo.harutheme.com/circle/film-category/historycal/" rel="tag">Historycal</a></div>
+							</div>
+						</div>                                    <div class="film-item style_1 comedy drama ">
+							<div class="film-image">
+								<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/red-sonja.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/red-sonja.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/red-sonja-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                            <div class="film-icon"><a href="http://demo.harutheme.com/circle/film/red-sonja/" class="view-film-button-direct"></a></div>
+									</div>
+							<div class="film-meta">
+								<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+								<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/red-sonja/">Red Sonja</a></h3>
+								<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/comedy/" rel="tag">Comedy</a> / <a href="http://demo.harutheme.com/circle/film-category/drama/" rel="tag">Drama</a></div>
+							</div>
+						</div>                                    <div class="film-item style_1 action historycal ">
+							<div class="film-image">
+								<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/drive-angry.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/drive-angry.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/drive-angry-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                            <div class="film-icon"><a href="http://demo.harutheme.com/circle/film/drive-angry/" class="view-film-button-direct"></a></div>
+									</div>
+							<div class="film-meta">
+								<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+								<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/drive-angry/">Drive Angry</a></h3>
+								<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/action/" rel="tag">Action</a> / <a href="http://demo.harutheme.com/circle/film-category/historycal/" rel="tag">Historycal</a></div>
+							</div>
+						</div>                                    <div class="film-item style_1 comedy drama ">
+							<div class="film-image">
+								<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/eiskonigin.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/eiskonigin.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/eiskonigin-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                    <div class="film-label new">
+										New            </div>
+													<div class="film-icon"><a href="http://demo.harutheme.com/circle/film/last-christmas/" class="view-film-button-direct"></a></div>
+									</div>
+							<div class="film-meta">
+								<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+								<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/last-christmas/">Last Christmas</a></h3>
+								<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/comedy/" rel="tag">Comedy</a> / <a href="http://demo.harutheme.com/circle/film-category/drama/" rel="tag">Drama</a></div>
+							</div>
+						</div>                            </div>
+									<div class="film-list columns-5">
+										<div class="film-item style_1 action drama ">
+											<div class="film-image">
+												<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/wynonna.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/wynonna.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/wynonna-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                    <div class="film-label hot">
+												Hot            </div>
+												<div class="film-icon"><a href="http://demo.harutheme.com/circle/film/wynonna/" class="view-film-button-direct"></a></div>
+											</div>
+											<div class="film-meta">
+												<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+												<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/wynonna/">Wynonna</a></h3>
+												<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/action/" rel="tag">Action</a> / <a href="http://demo.harutheme.com/circle/film-category/drama/" rel="tag">Drama</a></div>
+											</div>
+										</div>                                    <div class="film-item style_1 comedy historycal ">
+										<div class="film-image">
+											<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/war-is-coming.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/war-is-coming.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/war-is-coming-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                    <div class="film-label trending">
+											Trend            </div>
+											<div class="film-icon"><a href="http://demo.harutheme.com/circle/film/war-is-coming/" class="view-film-button-direct"></a></div>
+										</div>
+										<div class="film-meta">
+											<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+											<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/war-is-coming/">War is Coming</a></h3>
+											<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/comedy/" rel="tag">Comedy</a> / <a href="http://demo.harutheme.com/circle/film-category/historycal/" rel="tag">Historycal</a></div>
+										</div>
+									</div>                                    <div class="film-item style_1 comedy drama ">
+										<div class="film-image">
+											<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/red-sonja.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/red-sonja.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/red-sonja-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                            <div class="film-icon"><a href="http://demo.harutheme.com/circle/film/red-sonja/" class="view-film-button-direct"></a></div>
+										</div>
+										<div class="film-meta">
+											<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+											<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/red-sonja/">Red Sonja</a></h3>
+											<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/comedy/" rel="tag">Comedy</a> / <a href="http://demo.harutheme.com/circle/film-category/drama/" rel="tag">Drama</a></div>
+										</div>
+									</div>                                    <div class="film-item style_1 action historycal ">
+										<div class="film-image">
+											<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/drive-angry.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/drive-angry.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/drive-angry-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                            <div class="film-icon"><a href="http://demo.harutheme.com/circle/film/drive-angry/" class="view-film-button-direct"></a></div>
+										</div>
+										<div class="film-meta">
+											<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+											<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/drive-angry/">Drive Angry</a></h3>
+											<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/action/" rel="tag">Action</a> / <a href="http://demo.harutheme.com/circle/film-category/historycal/" rel="tag">Historycal</a></div>
+										</div>
+									</div>                                    <div class="film-item style_1 comedy drama ">
+										<div class="film-image">
+											<img width="270" height="390" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/eiskonigin.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/eiskonigin.jpg 270w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/eiskonigin-208x300.jpg 208w" sizes="(max-width: 270px) 100vw, 270px" />                    <div class="film-label new">
+											New            </div>
+											<div class="film-icon"><a href="http://demo.harutheme.com/circle/film/last-christmas/" class="view-film-button-direct"></a></div>
+										</div>
+										<div class="film-meta">
+											<div class="film-rating"><span class="point">8.7</span><span class="total">/10</span></div>
+											<h3 class="film-title"><a href="http://demo.harutheme.com/circle/film/last-christmas/">Last Christmas</a></h3>
+											<div class="film-category"><a href="http://demo.harutheme.com/circle/film-category/comedy/" rel="tag">Comedy</a> / <a href="http://demo.harutheme.com/circle/film-category/drama/" rel="tag">Drama</a></div>
+										</div>
+									</div>                            </div>
+									<!-- Pagination -->
+													<div class="film-search-form-shortcode-paging-wrapper paging-load-more">
+
+										<button data-href="http://demo.harutheme.com/circle/home-7/page/2/" type="button"  data-loading-text="<span class='fa fa-spinner fa-spin'></span> Loading..." class="film-load-more">
+											View More                </button>
+												</div>
+											</div>
+							</div>
+								</div>
+        
+        </div></div></div></div></div></div></div></div>
+    </div>
+    </div>                    </div>
+                </div>
+            </div>
+                        </main>                        </div>
+            <!-- Close HARU Content Main -->
+
+                    </div>
+        <!-- Close haru main -->
+        <a class="back-to-top" href="javascript:;">
+    <i class="fa fa-angle-up"></i>
+</a>    <div class="haru-canvas-menu-wrapper dark">
+        <a href="#" class="haru-canvas-menu-close"><i class="fa fa-close"></i></a>
+        <div class="haru-canvas-menu-inner sidebar">
+            <section id="media_image-2" class="widget-container widget_media_image"><img width="300" height="300" src="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/willian-gallas-300x300.jpg" class="image wp-image-859  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" srcset="http://demo.harutheme.com/circle/wp-content/uploads/2017/08/willian-gallas-300x300.jpg 300w, http://demo.harutheme.com/circle/wp-content/uploads/2017/08/willian-gallas.jpg 415w" sizes="(max-width: 300px) 100vw, 300px" /></section>        </div>
+    </div>
+        <div class="haru-ajax-overflow">
+        <div class="haru-ajax-loading">
+            <div class="loading-wrapper">
+                <div class="spinner" id="spinner_one"></div>
+                <div class="spinner" id="spinner_two"></div>
+                <div class="spinner" id="spinner_three"></div>
+                <div class="spinner" id="spinner_four"></div>
+                <div class="spinner" id="spinner_five"></div>
+                <div class="spinner" id="spinner_six"></div>
+                <div class="spinner" id="spinner_seven"></div>
+                <div class="spinner" id="spinner_eight"></div>
+            </div>
+        </div>
+    </div>
+        			<script type="text/javascript">
+				function revslider_showDoubleJqueryError(sliderID) {
+					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+						jQuery(sliderID).show().html(errorMessage);
+				}
+			</script>
+			<link rel='stylesheet' id='vc_google_fonts_abril_fatfaceregular-css'  href='//fonts.googleapis.com/css?family=Abril+Fatface%3Aregular&#038;ver=4.9.8' type='text/css' media='all' />
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/mediaelement/mediaelement-and-player.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/mediaelement/renderers/vimeo.min.js?ver=4.2.6-78496d1'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/mediaelement/plugins/ads/ads.min.js?ver=4.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/demo.harutheme.com\/circle\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.1'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/bootstrap/js/bootstrap.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/jPlayer/jquery.jplayer.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/owl-carousel/owl.carousel.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/prettyPhoto/js/jquery.prettyPhoto.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/infinitescroll/jquery.infinitescroll.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.4.5'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/stellar/jquery.stellar.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/modernizr/modernizr.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/cookie/jquery.cookie.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/magnificPopup/jquery.magnific-popup.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/sticky/haru-sticky-plugin.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/framework/core/megamenu/assets/js/megamenu.js?ver=4.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var haru_framework_ajax_url = "http:\/\/demo.harutheme.com\/circle\/wp-admin\/admin-ajax.php?activate-multi=true";
+var haru_framework_theme_url = "http:\/\/demo.harutheme.com\/circle\/wp-content\/themes\/haru-circle";
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/js/haru-main.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/js/haru-circle.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.4.5'></script>
+    </body>
+</html>
