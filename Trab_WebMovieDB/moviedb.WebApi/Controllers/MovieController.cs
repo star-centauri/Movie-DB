@@ -20,5 +20,12 @@ namespace moviedb.WebApi.Controllers
 
             return Json(filmes, JsonRequestBehavior.AllowGet);
         }
+
+        public JsonResult SearchCategory() 
+        {
+            var _repository = new ProvedorMovie();
+
+            return Json(_repository.BuscarTDGeneros(), JsonRequestBehavior.AllowGet);
+        }
     }
 }

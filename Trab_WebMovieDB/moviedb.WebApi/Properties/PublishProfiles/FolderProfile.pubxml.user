@@ -6,7 +6,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Bruna\Desktop\PastaEmGeral\Projetos\Projetos_Fazendo\WebMovieDB\Trab_WebMovieDB\moviedb.WebApi\bin\Release\Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Bruna\Desktop\PastaEmGeral\Projetos\Projetos_Fazendo\Movie-DB\Trab_WebMovieDB\moviedb.WebApi\bin\Release\Publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/HelpPage/HelpPage.css">
@@ -91,10 +91,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>07/25/2012 10:48:56</publishTime>
     </File>
     <File Include="bin/moviedb.WebApi.dll">
-      <publishTime>11/25/2018 13:17:37</publishTime>
+      <publishTime>11/25/2018 16:41:42</publishTime>
     </File>
     <File Include="bin/moviedb.WebApi.pdb">
-      <publishTime>11/25/2018 13:17:37</publishTime>
+      <publishTime>11/25/2018 16:41:42</publishTime>
     </File>
     <File Include="bin/MySql.Data.dll">
       <publishTime>09/26/2018 06:42:22</publishTime>
@@ -382,13 +382,13 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/24/2018 11:37:29</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/24/2018 15:52:50</publishTime>
+      <publishTime>11/25/2018 16:38:02</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/24/2018 11:36:59</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/24/2018 13:42:59</publishTime>
+      <publishTime>11/25/2018 15:15:22</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/24/2018 11:36:59</publishTime>
@@ -397,7 +397,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>11/24/2018 11:36:59</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/24/2018 15:48:50</publishTime>
+      <publishTime>11/25/2018 13:48:55</publishTime>
     </File>
   </ItemGroup>
 </Project>
