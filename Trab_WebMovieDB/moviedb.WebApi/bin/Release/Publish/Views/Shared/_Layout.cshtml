@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie DB</title>
+    <link rel='stylesheet' id='js_composer_front-css' href='http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-css' href='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/bootstrap/css/bootstrap.min.css?ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css' href='http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-ionicons-css' href='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/ionicons/css/ionicons.min.css?ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='haru-theme-style-css' href='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/style.css?ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' id='redux-google-fonts-haru_circle_options-css' href='http://fonts.googleapis.com/css?family=Nunito+Sans%3A200%2C300%2C400%2C600%2C700%2C800%2C900%2C200italic%2C300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C900italic%7CPlayfair+Display+SC%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CPlayfair+Display%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CUbuntu%3A300%2C400%2C500%2C700%2C300italic%2C400italic%2C500italic%2C700italic&#038;ver=1520138991' type='text/css' media='all' />
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+
+    <meta name="generator" content="Powered by Slider Revolution 5.4.7.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <style type="text/css" title="dynamic-css" class="options-output">
+        body {
+            font-family: "Nunito Sans";
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-family: "Playfair Display";
+            font-weight: 700;
+            font-style: normal;
+            font-size: 36px;
+        }
+
+        h2 {
+            font-family: "Playfair Display";
+            font-weight: 700;
+            font-style: normal;
+            font-size: 28px;
+        }
+
+        h3 {
+            font-family: "Playfair Display";
+            font-weight: 700;
+            font-style: normal;
+            font-size: 24px;
+        }
+
+        h4 {
+            font-family: "Playfair Display";
+            font-weight: 700;
+            font-style: normal;
+            font-size: 21px;
+        }
+
+        h5 {
+            font-family: "Playfair Display";
+            font-weight: 700;
+            font-style: normal;
+            font-size: 18px;
+        }
+
+        h6 {
+            font-family: "Playfair Display";
+            font-weight: 700;
+            font-style: normal;
+            font-size: 14px;
+        }
+
+        {
+            font-family: "Nunito Sans";
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .page-title-inner h1 {
+            font-family: "Playfair Display";
+            font-weight: 400;
+            font-style: normal;
+            font-size: 36px;
+        }
+
+        .page-title-inner .page-sub-title {
+            font-family: Ubuntu;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 14px;
+        }
+    </style>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+        .vc_custom_1503416552425 {
+            padding-right: 3% !important;
+            padding-bottom: 6% !important;
+            padding-left: 3% !important;
+            background-color: #1e1e1e !important;
+        }
+
+        .vc_custom_1503414344381 {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+    </style>
+</head>
+<body class="page-template-default page page-id-1040 layout-wide header-sidebar wpb-js-composer js-comp-ver-5.4.5 vc_responsive">
+    <main>
+        @RenderBody()
+    </main>
+    <script type="text/javascript">
+        function revslider_showDoubleJqueryError(sliderID) {
+            var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+            errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+            errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+            errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+            errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+            jQuery(sliderID).show().html(errorMessage);
+        }
+    </script>
+    <link rel='stylesheet' id='vc_google_fonts_abril_fatfaceregular-css' href='//fonts.googleapis.com/css?family=Abril+Fatface%3Aregular&#038;ver=4.9.8' type='text/css' media='all' />
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/mediaelement/mediaelement-and-player.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/mediaelement/renderers/vimeo.min.js?ver=4.2.6-78496d1'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/mediaelement/plugins/ads/ads.min.js?ver=4.9.8'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wpcf7 = { "apiSettings": { "root": "http:\/\/demo.harutheme.com\/circle\/wp-json\/contact-form-7\/v1", "namespace": "contact-form-7\/v1" }, "recaptcha": { "messages": { "empty": "Please verify that you are not a robot." } } };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.1'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/bootstrap/js/bootstrap.min.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/jPlayer/jquery.jplayer.min.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/owl-carousel/owl.carousel.min.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/prettyPhoto/js/jquery.prettyPhoto.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/infinitescroll/jquery.infinitescroll.min.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.4.5'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/stellar/jquery.stellar.min.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/modernizr/modernizr.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/cookie/jquery.cookie.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/magnificPopup/jquery.magnific-popup.min.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/libraries/sticky/haru-sticky-plugin.min.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/framework/core/megamenu/assets/js/megamenu.js?ver=4.9.8'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var haru_framework_ajax_url = "http:\/\/demo.harutheme.com\/circle\/wp-admin\/admin-ajax.php?activate-multi=true";
+        var haru_framework_theme_url = "http:\/\/demo.harutheme.com\/circle\/wp-content\/themes\/haru-circle";
+/* ]]> */
+    </script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/js/haru-main.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/themes/haru-circle/assets/js/haru-circle.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+    <script type='text/javascript' src='http://demo.harutheme.com/circle/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.4.5'></script>
+</body>
+</html>
