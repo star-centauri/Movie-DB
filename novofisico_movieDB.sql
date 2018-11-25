@@ -1,16 +1,16 @@
 CREATE TABLE Usuario (
-    login VARCHAR(50) PRIMARY KEY,
+    login TEXT PRIMARY KEY,
     senha VARCHAR(50),
-    email VARCHAR(50)
+    email TEXT
 );
 
 CREATE TABLE Filme (
     ID_filme INT PRIMARY KEY,
-    ano_lancamento INT,
-    sinopse VARCHAR(50),
+    ano_lancamento DATE,
+    sinopse TEXT,
     duracao TIME,
     ranking REAL,
-    capa VARCHAR(50),
+    capa VARCHAR(100),
     nome_filme VARCHAR(50)
 );
 
@@ -21,7 +21,7 @@ CREATE TABLE Artista (
     data_nasc DATE,
     sexo CHARACTER,
     idade INT,
-    biografia VARCHAR(50),
+    biografia TEXT,
     foto VARCHAR(50),
     Artista_TIPO INT,
     P_nome_Arts VARCHAR(50),
@@ -30,11 +30,11 @@ CREATE TABLE Artista (
 
 CREATE TABLE Genero (
     ID_genero INT PRIMARY KEY,
-    nome_genero VARCHAR(50)
+    nome_genero VARCHAR(20)
 );
 
 CREATE TABLE Pais (
-    sigla_pais VARCHAR(50) PRIMARY KEY,
+    sigla_pais VARCHAR(4) PRIMARY KEY,
     nome_pais VARCHAR(50)
 );
 
@@ -52,7 +52,7 @@ CREATE TABLE Avaliacao (
     fk_Usuario_login VARCHAR(50),
     fk_Filme_ID_filme INT,
     nota INT,
-    comentario VARCHAR(50),
+    comentario TEXT,
     PRIMARY KEY (fk_Usuario_login, fk_Filme_ID_filme)
 );
 
@@ -78,7 +78,7 @@ CREATE TABLE Gravado_em (
 
 CREATE TABLE local_nasc_Artista_Pais_Estado (
     fk_Artista_ID_Artista INT,
-    fk_Pais_sigla_pais VARCHAR(50),
+    fk_Pais_sigla_pais VARCHAR(4),
     fk_Estado_sigla_estado VARCHAR(50)
 );
 
