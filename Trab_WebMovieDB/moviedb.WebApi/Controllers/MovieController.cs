@@ -27,5 +27,44 @@ namespace moviedb.WebApi.Controllers
 
             return Json(_repository.BuscarTDGeneros(), JsonRequestBehavior.AllowGet);
         }
+
+        public JsonResult SearchMovieCategory(string categoryName)
+        {
+            var _repository = new ProvedorMovie();
+            var filmes = _repository.BuscarFilmesPorGenero(categoryName);
+
+            foreach (var filme in filmes)
+            {
+                filme.Generos = _repository.BuscarGenero(filme.Id);
+            }
+
+            return Json(filmes, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult SearchMovieSort(string order)
+        {
+            var _repository = new ProvedorMovie();
+            var filmes = _repository.BuscarFilmesPorOrdem(order);
+
+            foreach (var filme in filmes)
+            {
+                filme.Generos = _repository.BuscarGenero(filme.Id);
+            }
+
+            return Json(filmes, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult SearchMovieTitle(string title)
+        {
+            var _repository = new ProvedorMovie();
+            var filmes = _repository.BuscarFilmesPorTitulo(title);
+
+            foreach (var filme in filmes)
+            {
+                filme.Generos = _repository.BuscarGenero(filme.Id);
+            }
+
+            return Json(filmes, JsonRequestBehavior.AllowGet);
+        }
     }
 }

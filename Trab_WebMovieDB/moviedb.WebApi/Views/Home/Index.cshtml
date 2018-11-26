@@ -76,37 +76,29 @@
                                                         <div class="vc_column-inner ">
                                                             <div class="wpb_wrapper">
                                                                 <div class=" ">
-                                                                    <div class="film-search-form-shortcode-wrapper search-form-ajax ">
+                                                                    <div class="film-search-form-shortcode-wrapper">
                                                                         <!-- FILM SEARCH FORM -->
-                                                                        <form role="search" method="get" id="film-searchform" class="film-searchform" action="http://demo.harutheme.com/circle">
+                                                                        <div id="film-searchform" class="film-searchform">
                                                                             <div class="data-search"
-                                                                                 data-current_page="http://demo.harutheme.com/circle/home-7"
-                                                                                 data-columns="5"
                                                                                  data-film_style="style_1"
-                                                                                 data-paging_style="loadmore"
-                                                                                 data-per_page="5">
+                                                                                 data-paging_style="loadmore">
 
-                                                                                <input type="text" value="" name="s" id="s" placeholder="Search for a Movie, Film..." />
+                                                                                <input type="text" id="input-filme" placeholder="Search for a Movie, Film..." />
 
                                                                                 <select name="category" id="category">
-                                                                                    <option value="-1">Todos</option>
+                                                                                    <option value="Todos">Todos</option>
                                                                                 </select>
 
                                                                                 <select name="sort" id="sort">
                                                                                     <option value="">Sort By</option>
-                                                                                    <option value="date-desc">Newest</option>
-                                                                                    <option value="date-asc">Oldest</option>
-                                                                                    <option value="title-desc">Title (A-&gt;Z)</option>
-                                                                                    <option value="title-asc">Title (Z-&gt;A)</option>
-                                                                                    <option value="rand">Random</option>
+                                                                                    <option value="DESC">Title (A-&gt;Z)</option>
+                                                                                    <option value="ASC">Title (Z-&gt;A)</option>
                                                                                 </select>
-
-                                                                                <input type="hidden" name="post_type" value="haru_film" />
                                                                             </div>
-                                                                        </form>
+                                                                        </div>
                                                                         <!-- END FILM SEARCH FORM -->
                                                                         <div class="film-content">
-                                                                            <div class="film-list columns-5" id="film-content" style="position: relative; height: auto !important;">                                            
+                                                                            <div class="film-list columns-5" id="film-content">                                            
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -156,6 +148,7 @@
 </div>
 
 <script type='text/javascript' src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script type='text/javascript' src='http://demo.harutheme.com/circle/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <script>
 
     class Controllers {
@@ -164,8 +157,9 @@
                 url: request,
                 type: "POST",
                 dataType: "json",
-                data: JSON.stringify(data),
+                data: data,
                 success: function (response) {
+                    console.log(response);
                     callback(response)
                 }
             });
@@ -178,6 +172,19 @@
         buscarCategoria(callback) {
             this._ajax("/Movie/SearchCategory", '', callback);
         }
+
+        BuscarFilmePorGenero(categoryName, callback) {
+            this._ajax("/Movie/SearchMovieCategory", {categoryName: categoryName}, callback);
+        }
+
+        BuscarFilmePorOrdem(ordem, callback) {
+            this._ajax("/Movie/SearchMovieSort", { order: ordem }, callback);
+        }
+
+        BuscarFilmePorTitulo(title, callback) {
+            console.log(title);
+            this._ajax("/Movie/SearchMovieTitle", { title: title }, callback);
+        }
     }
 
 
@@ -185,6 +192,8 @@
         constructor() {
             this.main = $("#film-content");
             this.selectGenero = $('#category');
+            this.selectSort = $('#sort');
+            this.input = $('#input-filme');
         }
 
         layoutItem(item) {
@@ -219,7 +228,7 @@
         }
 
         layoutGenero(item) {
-            return `<option value="${item.Id}">${item.Nome}</option>`;
+            return `<option value="${item.Nome}">${item.Nome}</option>`;
         }
 
         setItemContent(element) {
@@ -229,6 +238,30 @@
         setItemGenero(element) {
             this.selectGenero.append(element);
         }
+
+        onChangeSelect(callback) {
+            this.selectGenero.on('change', function () {
+                callback(this.value);
+            });
+        }
+
+        onChangeSort(callback) {
+            this.selectSort.on('change', function () {
+                callback(this.value);
+            });
+        }
+
+        onChangeInputTitle(callback) {
+           this.input.on("keypress", function (e) {
+                if (e.keyCode == 13) {
+                    callback($(this).val());
+                }
+            });
+        }
+
+        resetMain() {
+            this.main.empty();
+        }
     }
 
     let view = new ViewMovie(),
@@ -236,8 +269,6 @@
 
     function addFilmes(filmes) {
         let length = filmes.length;
-
-        console.log(filmes);
 
         for (let i = 0; i < length; i++) {
             let element = view.layoutItem(filmes[i]);
@@ -248,14 +279,33 @@
     function addGeneroFiltro(generos) {
         let length = generos.length;
 
-        console.log(generos);
-
         for (let i = 0; i < length; i++) {
             let element = view.layoutGenero(generos[i]);
             view.setItemGenero(element);
         }
     }
 
+    function filterCategory(nameGenero) {
+        view.resetMain();
+
+        controllers.BuscarFilmePorGenero(nameGenero, addFilmes);
+    }
+
+    function filterSort(ordem) {
+        view.resetMain();
+
+        controllers.BuscarFilmePorOrdem(ordem, addFilmes);
+    }
+
+    function filmeTitle(title) {
+        view.resetMain();
+
+        controllers.BuscarFilmePorTitulo(title, addFilmes);
+    }
+
     controllers.buscarFilme(addFilmes);
     controllers.buscarCategoria(addGeneroFiltro);
+    view.onChangeSelect(filterCategory);
+    view.onChangeSort(filterSort);
+    view.onChangeInputTitle(filmeTitle);
 </script>
