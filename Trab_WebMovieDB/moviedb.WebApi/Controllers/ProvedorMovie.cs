@@ -8,7 +8,7 @@ namespace moviedb.WebApi.Controllers
 {
     internal class ProvedorMovie
     {
-        public string connstring = string.Format("Server=localhost; database=MovieDB; UID=root; password=16048112Teamo");
+        public string connstring = string.Format("Server=den1.mysql1.gear.host; database=moviedb3; UID=moviedb3; password=Py98HPH?1~e3");
 
         public List<MovieModel> BuscarFilmes()
         {
